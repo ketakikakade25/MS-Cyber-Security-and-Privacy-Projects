@@ -1,0 +1,25 @@
+The project submission contains the solution to Problem 1, part 1 and 2. 
+The project statement is also int he folder. 
+
+Submitted by:
+Ritesh patel (rrp8)
+Ketaki Kakade (Kk524)
+Yash Shah (yss22)
+
+Following are the files contained in the folder:
+
+As a solution to problem 1 part 1 
+-> SimpleCracker.java
+-> shadow-simple.txt
+-> common-passwords.txt
+
+As a solution to prpblem 1 part 2 
+-> Cracker.java
+-> MD5Shadow.java
+-> shadow.java
+-> common-passwords.java
+
+As a solution to problem 1 part 3:
+the online dictionary has been taken from github is as follows:
+-> MostPopularLetterPasses.txt
+ 

